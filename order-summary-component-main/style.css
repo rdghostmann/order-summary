@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display", sans-serif ;
+}
+
+ul[role='list'] {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+button {
+    all: unset;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--Very-pale-blue);
+
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("images/pattern-background-desktop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card {
+    width: min(20.94rem, 90%);
+    margin: auto 1.25rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    transition: all ease-out .5s;
+
+}
+
+
+.card-title {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    font-size: 1.625rem ;
+    margin-bottom: .8rem;
+
+}
+
+.card-text,
+li p {
+    color: var(--Desaturated-blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 1.6rem;
+    background-color: #fff;
+
+}
+
+.annual-plan {
+    display: flex;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    text-align: left;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    margin-top: 1.25rem;
+
+}
+
+.annual-text {
+    color: var(--Dark-blue);
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+
+li a {
+    color: var(--Bright-blue);
+    font-weight: 700;
+}
+
+li a:hover {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    
+}
+
+li:nth-child(2) {
+    flex-basis: 55%;
+    margin-left: 1.30rem;
+}
+
+.btn {
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    margin: 1.25rem auto;
+}
+
+.btn-primary:hover {
+    background-color: var(--Dark-blue);
+    transition: ease-in-out .3s;
+}
+
+
+.btn-secondary a {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    transition: ease-out .3s;
+}
+
+
+.btn-secondary a:hover {
+    color: var(--Dark-blue);
+    transition: ease-out .3s;
+}
+
+@media screen and (width <=23.4375rem) {
+    body {
+       background-color: var(--Very-pale-blue);
+    }
+
+    main {
+        background: url("images/pattern-background-mobile.svg");
+        background-position: top;
+        background-repeat: no-repeat;
+        
+    }
+
+
+}
